@@ -56,7 +56,7 @@ function gameEngine() {
     inputDir = {x: 0, y: 0};
     alert("Game over press any key to play again");
     snakeArr = [{ x: 13, y: 15 }];
-    musicSound.play();
+    // musicSound.play();
     score = 0;
   }
   // if snake eaten the food then score ++ and food regenerate
@@ -150,6 +150,7 @@ window.addEventListener("keydown", (e) => {
 });
 
 playGame.addEventListener('click',()=>{
+    musicSound.play();
      inputDir.x = -1;
       inputDir.y = 0;
      return;
