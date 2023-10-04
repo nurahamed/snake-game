@@ -12,6 +12,7 @@ const leftArrow = document.getElementById("left")
 const rightArrow = document.getElementById("right")
 const upArrow = document.getElementById("up")
 const downArrow = document.getElementById("down")
+const playGame = document.getElementById("play")
 let speed = 5;
 let score = 0; 
 let lastPaintTime = 0;
@@ -55,7 +56,7 @@ function gameEngine() {
     inputDir = {x: 0, y: 0};
     alert("Game over press any key to play again");
     snakeArr = [{ x: 13, y: 15 }];
-    // musicSound.play();
+    musicSound.play();
     score = 0;
   }
   // if snake eaten the food then score ++ and food regenerate
@@ -148,6 +149,12 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
+playGame.addEventListener('click',()=>{
+     inputDir.x = -1;
+      inputDir.y = 0;
+     return;
+})
+// mobile  left right up down switch
 leftArrow.addEventListener('click', ()=>{
     inputDir.x = -1;
     inputDir.y = 0;
