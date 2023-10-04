@@ -151,20 +151,41 @@ window.addEventListener("keydown", (e) => {
 leftArrow.addEventListener('click', ()=>{
     inputDir.x = -1;
     inputDir.y = 0;
+    leftArrow.classList.toggle("button-active");
+
+    downArrow.classList.remove("button-active");
+    rightArrow.classList.remove("button-active");
+    upArrow.classList.remove("button-active");
     return;
 })
 rightArrow.addEventListener('click', ()=>{
     inputDir.x = 1;
-      inputDir.y = 0;
+    inputDir.y = 0;
+    rightArrow.classList.toggle("button-active");
+
+    downArrow.classList.remove("button-active");
+    leftArrow.classList.remove("button-active");
+    upArrow.classList.remove("button-active");
       return;
 })
 upArrow.addEventListener('click', ()=>{
     inputDir.x = 0;
-      inputDir.y = -1;
+    inputDir.y = -1;
+    upArrow.classList.toggle("button-active");
+
+    downArrow.classList.remove("button-active");
+    leftArrow.classList.remove("button-active");
+    rightArrow.classList.remove("button-active");
       return;
 })
 downArrow.addEventListener('click', ()=>{
     inputDir.x = 0;
-      inputDir.y = 1;
+    inputDir.y = 1;
+    downArrow.classList.toggle("button-active");
+
+
+    upArrow.classList.remove("button-active");
+    leftArrow.classList.remove("button-active");
+    rightArrow.classList.remove("button-active");
       return;
 })
