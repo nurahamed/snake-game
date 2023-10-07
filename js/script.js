@@ -55,7 +55,7 @@ function gameEngine() {
     musicSound.pause();
     inputDir = {x: 0, y: 0};
     alert("Game over press any key to play again");
-    snakeArr = [{ x: 13, y: 15 }];
+    snakeArr = [{ x: 14, y: 4 }];
     // musicSound.play();
     score = 0;
   }
@@ -122,6 +122,7 @@ window.requestAnimationFrame(main);
 window.addEventListener("keydown", (e) => {
   inputDir = { x: 0, y: 1 }; // start the game
   moveSound.play();
+  musicSound.play();
   switch (e.key) {
     case "ArrowUp":
       console.log("ArrowUp");
